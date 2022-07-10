@@ -1,13 +1,13 @@
-package thamuswan.sample.springfileservice;
+package thamuswan.sample.file_service;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringFileServiceSampleApplication {
+public class Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringFileServiceSampleApplication.class, args);
+		SpringApplication.run(Application.class, args);
 	}
 
 }
