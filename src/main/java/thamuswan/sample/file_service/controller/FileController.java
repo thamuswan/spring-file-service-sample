@@ -35,12 +35,13 @@ public class FileController {
 
   private Map<String, FileContent> generatedFileContents = new ConcurrentHashMap<>();
 
-
   @PostMapping("generate-file")
   public HttpEntity<String> generateFile(@RequestBody GenerateFileRequest request) {
 
-    try (ByteArrayOutputStream os = new ByteArrayOutputStream();
-        PrintWriter pw = new PrintWriter(os);) {
+    try (//
+        ByteArrayOutputStream os = new ByteArrayOutputStream();
+        PrintWriter pw = new PrintWriter(os); //
+    ) {
 
       String uuid = UUID.randomUUID().toString();
       new Thread(() -> {
@@ -88,7 +89,6 @@ public class FileController {
     } else {
       return ResponseEntity.noContent().build();
     }
-
   }
 
 }
